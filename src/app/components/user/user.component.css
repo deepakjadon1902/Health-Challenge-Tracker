@@ -1,0 +1,118 @@
+/* Stats Section Container */
+section {
+    background: linear-gradient(135deg, #0f172a, #164e63);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    margin: 2rem auto;
+    padding: 2.5rem;
+    color: #ffffff;
+    min-height: 500px;
+}
+
+/* Heading */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #fff, #e2e8f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chart Container */
+.my-8 {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.my-8:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+}
+
+/* PrimeNG Chart Customization */
+:deep(.p-chart) {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 400px;
+}
+
+/* Loading State */
+.chart-loading {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+/* Chart Legend Customization */
+:deep(.p-chart-legend) {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .my-8 {
+        padding: 1rem;
+    }
+
+    :deep(.p-chart) {
+        min-height: 300px;
+    }
+}
+
+/* Animation for Chart Load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.my-8 {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom Chart Tooltip */
+:deep(.p-chart-tooltip) {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Empty State */
+.no-data {
+    text-align: center;
+    padding: 3rem;
+    color: #e2e8f0;
+    font-size: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 2rem 0;
+}
